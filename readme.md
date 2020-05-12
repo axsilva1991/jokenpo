@@ -2,7 +2,7 @@
 
 Este aplicativo tem como o objetivo analisar o resultado de múltiplos jogadores em um jogo de jokenpo.
 
-##### Quais são as funcionalidades incorporadas:
+#### Quais são as funcionalidades incorporadas:
 * <b>Jogadas </b><br>
 1 Adicionar/Cadastrar <br>
 2 Remover <br>
