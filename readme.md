@@ -21,7 +21,7 @@ Este aplicativo tem como o objetivo analisar o resultado de múltiplos jogadores 
 - [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
 
 ##### Download do Projeto
-* Clone o projeto com o comando ``git clone #mudar#``
+* Clone o projeto com o comando ``git clone https://github.com/axsilva1991/jokenpo.git``
 
 ##### Instalação:
 * Abra sua ide de preferencia e importe o projeto.<br>
