@@ -22,8 +22,8 @@ Este aplicativo tem como o objetivo analisar o resultado de múltiplos jogadores 
 <b>(No caso do Eclipse) File > Import > Gradle > Existing Gradle Project.</b>
 
 ##### TODO:
-[x] Crialção de um readme.
-[x] Criação de models e regras de negocio.
-[] Finalizar Implementação do controller.
-[] Finalizar Implementação do criar exeptions personalizadas. 
-[] Iniciar e finalizar testes unitários.
+[x] Crialção de um readme.<br>
+[x] Criação de models e regras de negocio.<br>
+[] Finalizar Implementação do controller.<br>
+[] Finalizar Implementação do criar exeptions personalizadas. <br>
+[] Iniciar e finalizar testes unitários.<br>
