@@ -25,5 +25,5 @@ Este aplicativo tem como o objetivo analisar o resultado de múltiplos jogadores 
 [x] Crialção de um readme.<br>
 [x] Criação de models e regras de negocio.<br>
 [] Finalizar Implementação do controller.<br>
-[] Finalizar Implementação do criar exeptions personalizadas. <br>
+[] Finalizar Implementação de exeptions personalizadas. <br>
 [] Iniciar e finalizar testes unitários.<br>
