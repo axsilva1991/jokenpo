@@ -2,14 +2,8 @@
 
 Este aplicativo tem como o objetivo analisar o resultado de múltiplos jogadores em um jogo de jokenpo.
 
-#### Quais são as funcionalidades incorporadas:
-* <b>Jogadas </b><br>
-1 Adicionar/Cadastrar <br>
-2 Remover <br>
-3 Consultar <br>
-4 Excluir<br><br>
-
-* <b>Jogadores<br></b>
+## Quais são as funcionalidades incorporadas:
+* <b>Jogadas e Jogadores<br></b>
 1 Adicionar/Cadastrar <br>
 2 Remover <br>
 3 Consultar <br>
@@ -26,3 +20,10 @@ Este aplicativo tem como o objetivo analisar o resultado de múltiplos jogadores 
 ##### Instalação:
 * Abra sua ide de preferencia e importe o projeto.<br>
 <b>(No caso do Eclipse) File > Import > Gradle > Existing Gradle Project.</b>
+
+##### TODO:
+[x] Crialção de um readme.
+[x] Criação de models e regras de negocio.
+[] Finalizar Implementação do controller.
+[] Finalizar Implementação do criar exeptions personalizadas. 
+[] Iniciar e finalizar testes unitários.
