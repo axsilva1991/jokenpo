@@ -13,7 +13,7 @@ Olá seja bem vindo ao código fonte do JokenPo, da empresa Axsilva Games.
 - [Contratos API](#contratos-api)
 
 ## Regras do Jogo:
-- O jogo pode ser executado para diversos players simu.
+- O jogo pode ser executado para diversos players simultâneos.
 - Para esta versão estamos trabalhando apenas com casos de vencedores isolados, por exemplo: 
 * Caso mais de 1 jogador vença a mesma partida, estamos considerando um empate.
 <br>- Possibilidades:<br><p>
