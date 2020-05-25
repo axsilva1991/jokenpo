@@ -1,7 +1,5 @@
 package com.br.axsilva_games.jokenpo.modelo;
 
-import com.br.axsilva_games.jokenpo.util.Opcao;
-
 public class Jogador {
 	private String nome;
 	private Escolha escolha;
@@ -19,10 +17,9 @@ public class Jogador {
 		return this.escolha;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Jogador Vencedor foi: " + nome + ", escolhendo a opção:" + escolha.opcao;
+		return "Jogador [" + nome + ", Opção:" + escolha.opcao+"]";
 	}
 	
 	

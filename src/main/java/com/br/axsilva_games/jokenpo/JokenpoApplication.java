@@ -8,6 +8,7 @@ public class JokenpoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(JokenpoApplication.class, args);
+
 	}
 
 }

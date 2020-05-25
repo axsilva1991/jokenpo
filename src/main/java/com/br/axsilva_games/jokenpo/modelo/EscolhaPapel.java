@@ -2,10 +2,16 @@ package com.br.axsilva_games.jokenpo.modelo;
 
 import java.util.List;
 
-import com.br.axsilva_games.jokenpo.util.Opcao;
-
-public class Papel extends Escolha {
-	Papel() {
+import com.br.axsilva_games.jokenpo.modelo.util.Opcao;
+/**
+ * 
+ * Classe responsável por representar as regras relacionadas a EscolhaPapel.
+ * @author Anderson Xavier
+ * @version 1.0.0
+ * 
+ */
+public class EscolhaPapel extends Escolha {
+	public EscolhaPapel() {
 		setOpcao(); 
 	}
 

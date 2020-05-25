@@ -1,4 +1,4 @@
-package com.br.axsilva_games.jokenpo.util;
+package com.br.axsilva_games.jokenpo.modelo.util;
 
 public enum Opcao {
 	PEDRA("pedra"),

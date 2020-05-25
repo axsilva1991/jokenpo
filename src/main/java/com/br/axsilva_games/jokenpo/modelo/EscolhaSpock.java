@@ -1,12 +1,17 @@
 package com.br.axsilva_games.jokenpo.modelo;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.br.axsilva_games.jokenpo.util.Opcao;
-
-public class Spock extends Escolha {
-	public Spock() {
+import com.br.axsilva_games.jokenpo.modelo.util.Opcao;
+/**
+ * 
+ * Classe responsável por representar as regras relacionadas a EscolhaSpock.
+ * @author Anderson Xavier
+ * @version 1.0.0
+ * 
+ */
+public class EscolhaSpock extends Escolha {
+	public EscolhaSpock() {
 		setOpcao();
 	}
 
