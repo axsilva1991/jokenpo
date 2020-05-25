@@ -7,7 +7,7 @@ Olá seja bem vindo ao código fonte do JokenPo, da empresa Axsilva Games.
 - [Regras do Jogo](#regras-do-jogo)
 - [Dicas](#dicas)
 - [Funcionalidades](#funcionalidades)
-- [Requisitos](#equisitos)
+- [Requisitos](#requisitos)
 - [Download do Projeto](#download-do-projeto)
 - [Como Instalar](#como-instalar)
 - [Contratos API](#contratos-api)
