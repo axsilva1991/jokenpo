@@ -10,4 +10,10 @@ public class JogadorResponseDTO {
 	public JogadorResponseDTO(List<JogadorRequestDTO> jogadores) {
 		this.jogadores = jogadores;
 	}
+	public List<JogadorRequestDTO> getJogadores() {
+		return jogadores;
+	}
+	public void setJogadores(List<JogadorRequestDTO> jogadores) {
+		this.jogadores = jogadores;
+	}
 }

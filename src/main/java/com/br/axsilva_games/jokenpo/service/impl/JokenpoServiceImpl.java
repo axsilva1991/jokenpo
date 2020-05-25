@@ -18,26 +18,23 @@ import com.br.axsilva_games.jokenpo.modelo.util.Opcao;
 import com.br.axsilva_games.jokenpo.service.JokenpoService;
 import com.br.axsilva_games.jokenpo.service.impl.util.JogadoresCast;
 
-
 @Service
 public class JokenpoServiceImpl implements JokenpoService {
 	@Autowired
 	JogadoresCast jogadoresFile;
-	
+
 	@Override
 	public ResponseEntity<JogadorResponseDTO> adicionarJogador(JogadorRequestDTO jogador) {
-		List<Jogador> jogadores = new ArrayList<Jogador>();;
-		if (jogador.equals(null) 
-			|| jogador.getJogada().equals(null) 
-			|| jogador.getJogada().isEmpty()
-			|| jogador.getNome().isEmpty())
+		List<Jogador> jogadores = new ArrayList<Jogador>();
+		if (jogador.equals(null) || jogador.getJogada().equals(null) || jogador.getJogada().isEmpty()
+				|| jogador.getNome().isEmpty())
 			return null;
 		return null;
 
-			//return ResponseEntity<List<JogadorResponse>>;	
-		//if(validaJogada(jogador.getJogada())) 
-			//return new JogadorResponse("O Jogador/Opção não podem ser válida");		
-		//return new JogadorResponse(jogador,"Jogador criado com sucesso");
+		// return ResponseEntity<List<JogadorResponse>>;
+		// if(validaJogada(jogador.getJogada()))
+		// return new JogadorResponse("O Jogador/Opção não podem ser válida");
+		// return new JogadorResponse(jogador,"Jogador criado com sucesso");
 	}
 
 	@Override
@@ -49,35 +46,38 @@ public class JokenpoServiceImpl implements JokenpoService {
 	public ResponseEntity<JogadorResponseDTO> consultarJogadores() {
 		JogadorResponseDTO jogadorResponseDTO = converterJogadorToDTO();
 		if (jogadorResponseDTO != null)
-			return new ResponseEntity<JogadorResponseDTO>
-			(jogadorResponseDTO,HttpStatus.OK);
-		return new ResponseEntity<JogadorResponseDTO>
-			(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<JogadorResponseDTO>(jogadorResponseDTO, HttpStatus.OK);
+		return new ResponseEntity<JogadorResponseDTO>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	@Override
 	public ResponseEntity<JogadorResponseDTO> jogar() {
 		return null;
 	}
-	
-	private JogadorResponseDTO converterJogadorToDTO (){
-		List<JogadorRequestDTO> jogadoresReqDTO = null;
+
+	private JogadorResponseDTO converterJogadorToDTO() {
+		List<JogadorRequestDTO> jogadoresReqDTO = new ArrayList<JogadorRequestDTO>();
+		List<Jogador> listaJogadores;
 		try {
-			jogadoresFile.castToJogadores().forEach(
-					jogador -> 
-					jogadoresReqDTO.add(
-							new JogadorRequestDTO(jogador.getNome(), 
-							jogador.getEscolha().toString()))
-					);
-		} catch (Exception e) {
-			e.printStackTrace();
+			listaJogadores = jogadoresFile.castToJogadores();
+			for (int i = 0; listaJogadores.size() > i; i++) {
+				jogadoresReqDTO.add(
+						new 
+						JogadorRequestDTO(listaJogadores.get(i).getNome(),
+								listaJogadores.get(i).getEscolha().getOpcao().getOpcao()));
+			}
+		} catch (Exception e1) {
+			e1.printStackTrace();
+			return null;
+
 		}
 		return new JogadorResponseDTO(jogadoresReqDTO);
-		
+
 	}
-	private boolean validaJogada(String jogada){
-		if(Opcao.valueOf(jogada) != null)
+
+	private boolean validaJogada(String jogada) {
+		if (Opcao.valueOf(jogada) != null)
 			return false;
-		return true;	
+		return true;
 	}
 }
