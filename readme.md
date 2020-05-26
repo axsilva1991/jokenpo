@@ -60,15 +60,17 @@ Olá seja bem vindo ao código fonte do JokenPo, da empresa Axsilva Games.
 
 - Consulta de Jogadores
 Request:<br>
-    ```javascript
+
+```
 
 curl -X GET \
 http://localhost:8080/api/v1/jokenpo/jogadores \``
 -H 'cache-control: no-cache'
-    ```
+```
 
 <br>Response:
-    ```javascript
+
+``` bash
 
 {
     "jogadores": [
@@ -94,7 +96,7 @@ http://localhost:8080/api/v1/jokenpo/jogadores \``
         }
     ]
 }
-    ```
+```
 
 
 ##### TODO:
