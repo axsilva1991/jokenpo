@@ -67,7 +67,7 @@ http://localhost:8080/api/v1/jokenpo/jogadores \``
 -H 'cache-control: no-cache'
     ```
 
-<br>Response:<br>
+<br>Response:
     ```javascript
 
 {
