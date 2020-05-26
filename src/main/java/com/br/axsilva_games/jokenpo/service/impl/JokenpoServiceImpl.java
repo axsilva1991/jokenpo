@@ -8,9 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.br.axsilva_games.jokenpo.controller.dto.JogadorItemResponseDTO;
-import com.br.axsilva_games.jokenpo.controller.dto.JogadorRequestDTO;
-import com.br.axsilva_games.jokenpo.controller.dto.JogadorResponseDTO;
+import com.br.axsilva_games.jokenpo.controller.dto.request.JogadorRequestDTO;
+import com.br.axsilva_games.jokenpo.controller.dto.response.JogadorItemResponseDTO;
+import com.br.axsilva_games.jokenpo.controller.dto.response.JogadorResponseDTO;
 import com.br.axsilva_games.jokenpo.modelo.Jogador;
 import com.br.axsilva_games.jokenpo.modelo.util.Opcao;
 import com.br.axsilva_games.jokenpo.service.JokenpoService;
@@ -28,7 +28,6 @@ public class JokenpoServiceImpl implements JokenpoService {
 				|| jogador.getNome().isEmpty())
 			return null;
 		return null;
-
 		// return ResponseEntity<List<JogadorResponse>>;
 		// if(validaJogada(jogador.getJogada()))
 		// return new JogadorResponse("O Jogador/Opção não podem ser válida");
@@ -45,7 +44,9 @@ public class JokenpoServiceImpl implements JokenpoService {
 		JogadorResponseDTO jogadorResponseDTO = converterJogadorToDTO();
 		if (jogadorResponseDTO != null)
 			return new ResponseEntity<JogadorResponseDTO>(jogadorResponseDTO, HttpStatus.OK);
-		return new ResponseEntity<JogadorResponseDTO>(HttpStatus.INTERNAL_SERVER_ERROR);
+		return new ResponseEntity<JogadorResponseDTO>(
+				new JogadorResponseDTO("Não Foram encontrados dados para esta consulta."),
+				HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	@Override
@@ -59,10 +60,8 @@ public class JokenpoServiceImpl implements JokenpoService {
 		try {
 			listaJogadores = jogadoresFile.castToJogadores();
 			for (int i = 0; listaJogadores.size() > i; i++) {
-				jogadoresItemResponseDTO.add(
-						new 
-						JogadorItemResponseDTO(listaJogadores.get(i).getNome(),
-								listaJogadores.get(i).getEscolha().getOpcao().getOpcao()));
+				jogadoresItemResponseDTO.add(new JogadorItemResponseDTO(listaJogadores.get(i).getNome(),
+						listaJogadores.get(i).getEscolha().getOpcao().getOpcao()));
 			}
 		} catch (Exception e1) {
 			e1.printStackTrace();
@@ -71,11 +70,5 @@ public class JokenpoServiceImpl implements JokenpoService {
 		}
 		return new JogadorResponseDTO(jogadoresItemResponseDTO);
 
-	}
-
-	private boolean validaJogada(String jogada) {
-		if (Opcao.valueOf(jogada) != null)
-			return false;
-		return true;
 	}
 }

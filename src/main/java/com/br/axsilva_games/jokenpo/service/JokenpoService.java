@@ -3,8 +3,8 @@ package com.br.axsilva_games.jokenpo.service;
 
 import org.springframework.http.ResponseEntity;
 
-import com.br.axsilva_games.jokenpo.controller.dto.JogadorRequestDTO;
-import com.br.axsilva_games.jokenpo.controller.dto.JogadorResponseDTO;
+import com.br.axsilva_games.jokenpo.controller.dto.request.JogadorRequestDTO;
+import com.br.axsilva_games.jokenpo.controller.dto.response.JogadorResponseDTO;
 
 public interface JokenpoService {
 

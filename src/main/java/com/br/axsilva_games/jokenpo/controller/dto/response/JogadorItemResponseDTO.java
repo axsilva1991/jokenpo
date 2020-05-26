@@ -1,4 +1,4 @@
-package com.br.axsilva_games.jokenpo.controller.dto;
+package com.br.axsilva_games.jokenpo.controller.dto.response;
 
 public class JogadorItemResponseDTO {
 	private String nome;
@@ -21,7 +21,10 @@ public class JogadorItemResponseDTO {
 	public void setJogada(String jogada) {
 		this.jogada = jogada;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "JogadorItemResponseDTO [nome=" + nome + ", jogada=" + jogada + "]";
+	}
+
 }
 

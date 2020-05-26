@@ -5,11 +5,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.br.axsilva_games.jokenpo.controller.dto.JogadorRequestDTO;
-import com.br.axsilva_games.jokenpo.controller.dto.JogadorResponseDTO;
+import com.br.axsilva_games.jokenpo.controller.dto.request.JogadorRequestDTO;
+import com.br.axsilva_games.jokenpo.controller.dto.response.JogadorResponseDTO;
 import com.br.axsilva_games.jokenpo.service.JokenpoService;
 
 @RestController
@@ -24,7 +25,8 @@ public class JokenpoController {
 		return jokenposervice.consultarJogadores();	
 	}
 	@PostMapping("/jogadores")
-	public ResponseEntity<JogadorResponseDTO> cadastrarJogador (JogadorRequestDTO jogador){
+	public ResponseEntity<JogadorResponseDTO> cadastrarJogador (@RequestBody JogadorRequestDTO jogador){
+		System.out.println(jogador);
 		return jokenposervice.adicionarJogador(jogador);
 	}
 	@DeleteMapping("/jogadores")
