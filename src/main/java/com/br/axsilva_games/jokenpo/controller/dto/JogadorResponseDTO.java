@@ -5,15 +5,19 @@ import java.util.List;
 
 public class JogadorResponseDTO {
 	
-	List<JogadorRequestDTO> jogadores = new ArrayList<JogadorRequestDTO>();
+	List<JogadorItemResponseDTO> jogadoresItemResponseDTO = new ArrayList<JogadorItemResponseDTO>();
+
+	public JogadorResponseDTO(List<JogadorItemResponseDTO> jogadoresItemResponseDTO) {
+		this.jogadoresItemResponseDTO = jogadoresItemResponseDTO;
+	}
+
+	public List<JogadorItemResponseDTO> getJogadoresItemResponseDTO() {
+		return jogadoresItemResponseDTO;
+	}
+
+	public void setJogadoresItemResponseDTO(List<JogadorItemResponseDTO> jogadoresItemResponseDTO) {
+		this.jogadoresItemResponseDTO = jogadoresItemResponseDTO;
+	}
 	
-	public JogadorResponseDTO(List<JogadorRequestDTO> jogadores) {
-		this.jogadores = jogadores;
-	}
-	public List<JogadorRequestDTO> getJogadores() {
-		return jogadores;
-	}
-	public void setJogadores(List<JogadorRequestDTO> jogadores) {
-		this.jogadores = jogadores;
-	}
+	
 }
