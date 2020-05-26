@@ -59,7 +59,7 @@ Olá seja bem vindo ao código fonte do JokenPo, da empresa Axsilva Games.
 ## Contratos API:
 
 - Consulta de Jogadores
-Request:<br>
+<b><br>Request:<br></b>
 
 ```
 
@@ -68,7 +68,7 @@ http://localhost:8080/api/v1/jokenpo/jogadores \``
 -H 'cache-control: no-cache'
 ```
 
-<br>Response:
+<b><br>Response:<br></b>
 
 ``` bash
 
