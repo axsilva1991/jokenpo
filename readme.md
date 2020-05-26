@@ -77,22 +77,6 @@ http://localhost:8080/api/v1/jokenpo/jogadores \``
         {
             "nome": "Marilson",
             "jogada": "pedra"
-        },
-        {
-            "nome": "Amarildo",
-            "jogada": "tesoura"
-        },
-        {
-            "nome": "Carlos",
-            "jogada": "tesoura"
-        },
-        {
-            "nome": "Alberto",
-            "jogada": "tesoura"
-        },
-        {
-            "nome": "Silva",
-            "jogada": "tesoura"
         }
     ]
 }
