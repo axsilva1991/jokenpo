@@ -49,13 +49,52 @@ Olá seja bem vindo ao código fonte do JokenPo, da empresa Axsilva Games.
 - [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
 
 ## Download do Projeto
-* Clone o projeto com o comando ``git clone https://github.com/axsilva1991/jokenpo.git``
+* Clone o projeto com o comando <br>
+``git clone https://github.com/axsilva1991/jokenpo.git``
 
 ## Como Instalar:
 * Abra sua ide de preferencia e importe o projeto.<br>
 <b>(No caso do Eclipse) File > Import > Gradle > Existing Gradle Project.</b>
 
 ## Contratos API:
+
+- Consulta de Jogadores
+Request:<br>
+    ```javascript
+
+curl -X GET \
+http://localhost:8080/api/v1/jokenpo/jogadores \``
+-H 'cache-control: no-cache'
+    ```
+
+<br>Response:<br>
+    ```javascript
+
+{
+    "jogadores": [
+        {
+            "nome": "Marilson",
+            "jogada": "pedra"
+        },
+        {
+            "nome": "Amarildo",
+            "jogada": "tesoura"
+        },
+        {
+            "nome": "Carlos",
+            "jogada": "tesoura"
+        },
+        {
+            "nome": "Alberto",
+            "jogada": "tesoura"
+        },
+        {
+            "nome": "Silva",
+            "jogada": "tesoura"
+        }
+    ]
+}
+    ```
 
 
 ##### TODO:
