@@ -79,7 +79,6 @@ http://localhost:8080/api/v1/jokenpo/jogadores \``
 }
 ```
 
-
 ##### TODO:
 [] Finalizar Implementação do controller.<br>
 [x] Finalizar Implementação de exeptions personalizadas. <br>
