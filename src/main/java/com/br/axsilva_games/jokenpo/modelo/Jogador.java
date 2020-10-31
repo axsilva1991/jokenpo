@@ -19,7 +19,7 @@ public class Jogador {
 
 	@Override
 	public String toString() {
-		return "Jogador [" + nome + ", Opção:" + escolha.opcao+"]";
+		return "Jogador [" + nome + ", Opcao:" + escolha.opcao+"]";
 	}
 	
 	

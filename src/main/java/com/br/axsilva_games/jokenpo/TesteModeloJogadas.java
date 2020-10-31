@@ -3,6 +3,7 @@ package com.br.axsilva_games.jokenpo;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.br.axsilva_games.jokenpo.excecoes.JokenpoDefautlException;
 import com.br.axsilva_games.jokenpo.modelo.Jogador;
 import com.br.axsilva_games.jokenpo.modelo.Jogo;
 import com.br.axsilva_games.jokenpo.modelo.EscolhaLagarto;
@@ -21,7 +22,7 @@ public class TesteModeloJogadas {
 		Jogo jogo = new Jogo(jogadores);
 		try {
 			System.out.println("O Vencedor foi "+jogo.verificaVencedor(jogadores));
-		} catch (Exception e) {
+		} catch (JokenpoDefautlException e) {
 			e.printStackTrace();
 		}
 	}

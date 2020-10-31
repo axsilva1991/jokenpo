@@ -28,10 +28,6 @@ public class JokenpoServiceImpl implements JokenpoService {
 				|| jogador.getNome().isEmpty())
 			return null;
 		return null;
-		// return ResponseEntity<List<JogadorResponse>>;
-		// if(validaJogada(jogador.getJogada()))
-		// return new JogadorResponse("O Jogador/Opção não podem ser válida");
-		// return new JogadorResponse(jogador,"Jogador criado com sucesso");
 	}
 
 	@Override
@@ -45,7 +41,7 @@ public class JokenpoServiceImpl implements JokenpoService {
 		if (jogadorResponseDTO != null)
 			return new ResponseEntity<JogadorResponseDTO>(jogadorResponseDTO, HttpStatus.OK);
 		return new ResponseEntity<JogadorResponseDTO>(
-				new JogadorResponseDTO("Não Foram encontrados dados para esta consulta."),
+				new JogadorResponseDTO("Nï¿½o Foram encontrados dados para esta consulta."),
 				HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 

@@ -8,17 +8,10 @@ import java.util.Set;
 
 import com.br.axsilva_games.jokenpo.excecoes.JokenpoDefautlException;
 
-/**
- * Classe responsável por representar um jogo de Jokenpo da axisilva Games.
- * 
- * @author Anderson Xavier
- * @version 1.0.0
- * 
- */
 public class Jogo {
 	private Collection<Jogador> jogadores = new ArrayList<Jogador>();
 	/**
-	 * Constructor responsável por adicionar os jogadores no game.
+	 * Constructor responsï¿½vel por adicionar os jogadores no game.
 	 * 
 	 * @param jogadores
 	 */
@@ -27,7 +20,7 @@ public class Jogo {
 	}
 
 	/**
-	 * Método responsável por executar a regra de vencedores entre 2 jogadores.
+	 * Mï¿½todo responsï¿½vel por executar a regra de vencedores entre 2 jogadores.
 	 * 
 	 * @param jogador1
 	 * @param jogador2
@@ -39,7 +32,7 @@ public class Jogo {
 	}
 
 	/**
-	 * Método responsável por retornar o jogador vencedor do jogo
+	 * Mï¿½todo responsï¿½vel por retornar o jogador vencedor do jogo
 	 * @param Recebe uma lista de jogadores.
 	 * @return Tetorna o Jogador vencedor
 	 * @throws JokenpoDefautlException Caso hajam jogadas duplicadas ou empate este
@@ -56,13 +49,13 @@ public class Jogo {
 	}
 
 	/**
-	 * Método responsável validar se houve empate.
+	 * Mï¿½todo responsï¿½vel validar se houve empate.
 	 * 
 	 * @param Recebe uma lista de jogadores.
 	 * @return Tetorna o Jogador vencedor
 	 * @throws JokenpoDefautlException Caso o resultado seja empate, o sistema
 	 * devolve uma JokenpoDefautlException caso hajam 2 ganhadores e caso hajam empates como todos selecionem a mesma op~
-	 * apção.
+	 * apï¿½ï¿½o.
 	 */
 	private boolean houveEmpate(Jogador jogador, List<Jogador> jogadores) throws JokenpoDefautlException {
 		Jogador ganhador = null;
